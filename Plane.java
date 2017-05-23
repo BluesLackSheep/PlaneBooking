@@ -66,20 +66,45 @@ public class Plane{
             System.out.println("All seats are full. Sorry, for the inconvenience...");
         } else {
             try{
-   System.out.println("First name:");
+		    System.out.println("Please type in the number of seat you want to book." );
+		
+		InputStreamReader inStream = new InputStreamReader(System.in);
+		BufferedReader bufRead = new BufferedReader(inStream);
+		
+		String choiceSeat;
+		try {
+			choiceSeat = bufRead.readLine()；
+			if(choiceSeat == "A1")
+		    {
+				if(seats[0][0] == null)
+				{
+					System.out.println("In order to book this seat, please typy in your name, address and phone number.");
+					
+					System.out.println("First name:");
    
-   String firstName =bufRead.readLine();
+                                        String firstName =bufRead.readLine();
 		    
-   System.out.println("Last name:");
+                                        System.out.println("Last name:");
    
-   String lastName = bufRead.readLine();
+                                        String lastName = bufRead.readLine();
 		    
-   System.out.println("Address:");
-   String userAddress = bufRead.readLine();
+                                        System.out.println("Address:");
+                                        String userAddress = bufRead.readLine();
 
-   System.out.println("Phone number:");
-   String phoneNumberString = bufReas.readLine();
-   double phoneNumber = Double.parseDouble(phoneNumberString);
+                                        System.out.println("Phone number:");
+                                        String phoneNumberString = bufReas.readLine();
+                                        double phoneNumber = Double.parseDouble(phoneNumberString);
+				}
+				
+				else
+				{
+					System.out.println("The seat has been booked, please choose anthor seat.");
+				}
+		    }
+
+   
+		    
+  
 		    
 //MAKE SURE THIS INFO IS ABLE TO BE CALLED UPON, THE ATTENDANT NEEDS THE CUSTOMER INFO LATER ON!!!	    
   }
